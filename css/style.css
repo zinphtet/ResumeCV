@@ -183,8 +183,8 @@ body {
 }
 @media screen and (max-width: 31.25rem) {
   #main .left .mode {
-    top: 5.5rem;
-    right: 5rem;
+    top: 10rem;
+    right: 10.2rem;
   }
 }
 #main .left .mode i {
