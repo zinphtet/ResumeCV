@@ -74,20 +74,14 @@ body{
 
 #main{
      display: flex;
+     overflow-x: hidden;
      @media screen and (max-width : 50rem){
         // font-size: 62.5%;
         flex-direction: column;
     }
     .left{
         padding: 5rem 3rem;
-
-        @media screen and (max-width : 50rem){
-            padding: 5rem 10rem;
-        } 
-        @media screen and (max-width : 21.875rem){
-            padding: 5rem 15rem;
-        } 
-    //    border: 1px solid blue;
+        overflow: hidden;
     background-color: var(--bgcolor-2);
        flex: 2.5;
       position: relative;
@@ -101,7 +95,7 @@ body{
 
             @media screen and (max-width : 31.25rem){
                 top: 5rem;
-                right: 10rem;
+                right: 3rem;
             } 
             i{
                 font-size: 3rem;
@@ -118,7 +112,7 @@ body{
             right: 2rem;
             @media screen and (max-width : 31.25rem){
                 top: 10rem;
-                right: 10.2rem;
+                right: 3rem;
             } 
             color: var(--textcolor-1);
             i{
@@ -185,14 +179,16 @@ body{
        }
     }
     .right{
+        // padding: 5rem 3rem;
         padding: 5rem 3rem;
         // border: 1px solid rgb(230, 8, 60);
-        @media screen and (max-width : 50rem){
-            padding: 5rem 10rem;
-        } 
-        @media screen and (max-width : 21.875rem){
-            padding: 5rem 15rem;
-        }
+        overflow: hidden;
+        // @media screen and (max-width : 50rem){
+        //     padding: 5rem 10rem;
+        // } 
+        // @media screen and (max-width : 21.875rem){
+        //     padding: 5rem 5rem;
+        // }
         flex:5;
         background-color: var(--bgcolor-1);
         @media screen and (max-width : 50rem){

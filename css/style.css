@@ -131,6 +131,7 @@ body {
 
 #main {
   display: flex;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 50rem) {
   #main {
@@ -139,19 +140,10 @@ body {
 }
 #main .left {
   padding: 5rem 3rem;
+  overflow: hidden;
   background-color: var(--bgcolor-2);
   flex: 2.5;
   position: relative;
-}
-@media screen and (max-width: 50rem) {
-  #main .left {
-    padding: 5rem 10rem;
-  }
-}
-@media screen and (max-width: 21.875rem) {
-  #main .left {
-    padding: 5rem 15rem;
-  }
 }
 #main .left .download_2 {
   display: none;
@@ -164,7 +156,7 @@ body {
 @media screen and (max-width: 31.25rem) {
   #main .left .download_1 {
     top: 5rem;
-    right: 10rem;
+    right: 3rem;
   }
 }
 #main .left .download_1 i {
@@ -184,7 +176,7 @@ body {
 @media screen and (max-width: 31.25rem) {
   #main .left .mode {
     top: 10rem;
-    right: 10.2rem;
+    right: 3rem;
   }
 }
 #main .left .mode i {
@@ -240,18 +232,9 @@ body {
 }
 #main .right {
   padding: 5rem 3rem;
+  overflow: hidden;
   flex: 5;
   background-color: var(--bgcolor-1);
-}
-@media screen and (max-width: 50rem) {
-  #main .right {
-    padding: 5rem 10rem;
-  }
-}
-@media screen and (max-width: 21.875rem) {
-  #main .right {
-    padding: 5rem 15rem;
-  }
 }
 @media screen and (max-width: 50rem) {
   #main .right {
