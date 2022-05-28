@@ -20,25 +20,26 @@ html{
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
+
+    @media screen and (max-width : 50rem){
+        font-size: 62.5%;
+    }
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
 .section{
-    padding: .5rem 0;
+    padding: 0 0;
     // border: 1px solid skyblue;
 
     &>*{
         margin: 1.3rem 0;
     }
 }
-.main_title{
-    font-weight: var(--fontweight-6);
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    letter-spacing: .7rem;
-}
-.para{
-    color: var(--textcolor-3);
-    font-size: 1.7rem;
-}
+
 .i-right{
     display: flex;
     align-items: center;
@@ -51,42 +52,83 @@ html{
 .inner_1{
     // border: 1px solid blue;
     display: flex;
-    &>div{
-        // border: 1px solid rgb(212, 10, 141);
-    }
 }
 .inner_2{
     padding-left: 1rem;
+    &>*{
+        margin-bottom: 1rem;
+    }
 }
 .circle{
     font-size: 2rem;
     color: var(--textcolor-3);
 }
-.title_2{
-    font-size: 2rem;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    color: var(--textcolor-1);
-}
-.title_3{
-    font-size: 1.5rem;
-    color: var(--textcolor-2);
-}
+
 .line{
     width: .3rem;
-   height: 250%;
+   height: 230%;
    margin-top: -2rem;
    transform: translate(270%);
     background-color: var(--textcolor-3);
 }
+
 #main{
      display: flex;
-
+     @media screen and (max-width : 50rem){
+        // font-size: 62.5%;
+        flex-direction: column;
+    }
     .left{
         padding: 5rem 3rem;
+
+        @media screen and (max-width : 50rem){
+            padding: 5rem 10rem;
+        } 
+        @media screen and (max-width : 21.875rem){
+            padding: 5rem 15rem;
+        } 
     //    border: 1px solid blue;
     background-color: var(--bgcolor-2);
        flex: 2.5;
+      position: relative;
+        .download_2{
+            display: none;
+        }
+        .download_1{
+            position: absolute;
+            top: 2rem;
+            right: 8rem;
+
+            @media screen and (max-width : 31.25rem){
+                top: 5rem;
+                right: 10rem;
+            } 
+            i{
+                font-size: 3rem;
+                cursor: pointer;
+                color: var(--textcolor-1);
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+        .mode{
+            position: absolute;
+            top: 2.5rem;
+            right: 2rem;
+            @media screen and (max-width : 31.25rem){
+                top: 5.5rem;
+                right: 5rem;
+            } 
+            color: var(--textcolor-1);
+            i{
+                font-size: 2.5rem;
+                cursor: pointer;
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
        .profile{
         //    overflow: hidden;
         display: flex;
@@ -112,10 +154,12 @@ html{
                font-size: 2.5rem;
               text-transform: uppercase;
               margin-bottom: .5rem;
+              color: var(--textcolor-1);
            }
        .developer{
             font-weight: var(--fontweight-2);
             font-size: 1.7rem;
+            color: var(--textcolor-1);
            }
        }
        #address{
@@ -143,7 +187,268 @@ html{
     .right{
         padding: 5rem 3rem;
         // border: 1px solid rgb(230, 8, 60);
+        @media screen and (max-width : 50rem){
+            padding: 5rem 10rem;
+        } 
+        @media screen and (max-width : 21.875rem){
+            padding: 5rem 15rem;
+        }
         flex:5;
+        background-color: var(--bgcolor-1);
+        @media screen and (max-width : 50rem){
+            // font-size: 62.5%;
+            background-color: var(--bgcolor-2);
+        }
+
+        #experience {
+            .line{
+                height: 200%;
+            }
+        }
+        #certificate{
+            margin-top: 2rem;
+        }
+        #reference{
+           .references{
+               display: grid;
+               grid-template-columns: repeat(2,1fr);
+               grid-row-gap: 2rem;
+               .per_name{
+                   font-size: 2rem;
+                   margin-bottom: 1rem;
+                   color: var(--textcolor-1);
+               }
+               .per_phone,.per_email{
+                   font-size: 1.5rem;
+                   color: var(--textcolor-2);
+               }
+           }
+        }
+        #language{
+            .languages{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 2rem;
+                div{
+                    display: flex;
+                    align-items: center;
+                    font-size: 2rem;
+                    color: var(--textcolor-3);
+                    i{
+                        font-size: 1rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+        #interest{
+            .interests{
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+                grid-gap: 2rem;
+                div{
+                    .icon{
+                        font-size: 2rem;
+                        color: var(--textcolor-1);
+                        
+                    }
+                    p{
+                        font-size: 2rem;
+                        color: var(--textcolor-3);
+                        
+                    }
+                }
+            }
+        }
     }
 
 }
+
+
+
+#main.pdf{
+    max-width: 100rem;
+    .section{
+        padding: 0 0;
+
+        &>*{
+            margin: .5rem 0;
+        }
+    }
+    
+    .i-right{
+        i{
+            margin-right: .5rem;
+            font-size: 1.5rem;
+        }
+       
+    }
+
+    .inner_2{
+        padding-left: .5rem;
+        &>*{
+            margin-bottom: .2rem;
+        }
+    }
+    .circle{
+        font-size: 2rem;
+        
+    }
+    
+
+    .main_title{
+       
+        font-size: 2.2rem;
+       
+    }
+    .para{
+      
+        font-size: 1.5rem;
+    }
+    .title_2{
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+        
+    }
+    .title_3{
+        font-size: 1.3rem;
+       
+    }
+    .certificate{
+        font-size: 1.5rem;
+       
+        margin-bottom: .2rem;
+       
+    }
+
+    .left{
+        padding:  3rem;
+    
+       flex: 2.5;
+    
+        .download_2{
+            display: none;
+        }
+        .download_1{
+            display: none;
+            i{
+                font-size: 1.5rem;
+               
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+        .mode{
+           display: none;
+            i{
+                font-size: 1.5rem;
+             
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+       .profile{
+       
+        .img{
+            width: 8rem;
+            height: 8rem;
+           
+            margin-bottom: 1rem;
+        }
+           
+        .name{
+           
+               font-size: 2rem;
+          
+              margin-bottom: .2rem;
+            
+           }
+       .developer{
+          
+            font-size: 1.3rem;
+         
+           }
+       }
+       #address{
+           margin-top: 1rem;
+       }
+       #profile{
+     
+       #skill{
+        
+           .i-right{
+               i{
+                   font-size: .5rem;
+               }
+           }
+           .skill_inner{
+              grid-gap: .2rem;
+           }
+       }
+    }
+}
+    .right{
+        padding:  3rem;
+      
+
+        #experience {
+            .line{
+                height: 200%;
+            }
+        }
+        #certificate{
+            margin-top: 1rem;
+        }
+        #reference{
+            .references{
+              
+                grid-row-gap: 1rem;
+                .per_name{
+                    font-size: 1.5rem;
+                    margin-bottom: .2rem;
+                   
+                }
+                .per_phone,.per_email{
+                    font-size: 1.2rem;
+                  
+                }
+            }
+         }
+         #language{
+             .languages{
+              
+                 grid-template-columns: repeat(4,1fr);
+                 grid-gap: 1rem;
+                 div{
+                    
+                     font-size: 1.5rem;
+                    
+                     i{
+                         font-size: 1rem;
+                         margin-right: 1rem;
+                     }
+                 }
+             }
+         }
+         #interest{
+             .interests{
+              
+                 grid-gap: 1rem;
+                 div{
+                     .icon{
+                         font-size: 1.5rem;
+                       
+                         
+                     }
+                     p{
+                         font-size: 1.5rem;
+                       
+                         
+                     }
+                 }
+             }
+         }
+    }
+ }

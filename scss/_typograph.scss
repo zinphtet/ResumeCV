@@ -1,0 +1,31 @@
+
+.main_title{
+    font-weight: var(--fontweight-6);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    color: var(--textcolor-1);
+}
+.para{
+    color: var(--textcolor-3);
+    font-size: 1.7rem;
+}
+.title_2{
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: var(--textcolor-1);
+}
+.title_3{
+    font-size: 1.5rem;
+    color: var(--textcolor-2);
+}
+.certificate{
+    font-size: 2rem;
+    font-weight: var(--fontweight-4);
+    margin-bottom: .5rem;
+    color: var(--textcolor-1);
+}
+.hide{
+    display: none;
+}
